@@ -25,6 +25,8 @@ def index():
 
 @app.route('/model.json')
 def model():
+
+
     file = open('./xml/A.xml').read()
     doc = xml.CreateFromDocument(file)
     json = ModelReader().to_json(doc)
